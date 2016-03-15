@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post 'calc_dosubstract' => 'calc#dosubstract'
   post 'calc_domultiply' => 'calc#domultiply'
   post 'calc_dodivide' => 'calc#dodivide'
+  post 'calc_dontdivide' => 'calc#dontdivide'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

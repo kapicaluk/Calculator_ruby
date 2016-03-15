@@ -21,7 +21,10 @@ if ok
 
 		@firstNum = calc_params[:firstNum].to_i
 		@secondNum = calc_params[:secondNum].to_i
-		@result = @firstNum + @secondNum
+		# @result = @firstNum + @secondNum
+		obj = Calculator.new
+		@result = obj.add(@firstNum, @secondNum)
+		@countString  = Calculator.getCount
 else
 	render "add"
 end
@@ -45,7 +48,10 @@ if ok
 
 		@firstNum = calc_params[:firstNum].to_i
 		@secondNum = calc_params[:secondNum].to_i
-		@result = @firstNum - @secondNum
+		# @result = @firstNum - @secondNum
+		obj = Calculator.new
+		obj.substract(@firstNum, @secondNum)
+		@result = obj.result
 else
 	render "substract"
 
