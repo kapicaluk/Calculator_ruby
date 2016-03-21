@@ -52,6 +52,7 @@ if ok
 		obj = Calculator.new
 		obj.substract(@firstNum, @secondNum)
 		@result = obj.result
+		@countsubString  = Calculator.getCountsub
 else
 	render "substract"
 
@@ -79,7 +80,11 @@ if ok
 
 		@firstNum = calc_params[:firstNum].to_i
 		@secondNum = calc_params[:secondNum].to_i
-		@result = @firstNum * @secondNum
+		# @result = @firstNum * @secondNum
+		obj = Calculator.new
+		obj.multiply(@firstNum, @secondNum)
+		@result = obj.result
+		@countmultiplyString  = Calculator.getCountmultiply
 else
 	render "multiply"
 
@@ -109,7 +114,11 @@ if ok
 
 		@firstNum = calc_params[:firstNum].to_i
 		@secondNum = calc_params[:secondNum].to_i
-		@result = @firstNum / @secondNum
+		# @result = @firstNum / @secondNum
+		obj = Calculator.new
+		obj.divide(@firstNum, @secondNum)
+		@result = obj.result
+		@countdivideString  = Calculator.getCountdivide
 else
 	render "divide"
 
